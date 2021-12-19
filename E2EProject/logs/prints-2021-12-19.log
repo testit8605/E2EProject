@@ -1,0 +1,7 @@
+22:28:26.862 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+22:28:30.255 [TestNG-tests-3] INFO  Resources.Base - Non Restricted User
+22:44:20.435 [TestNG-tests-1] INFO  Resources.Base - Navigated to HomePage
+22:44:20.555 [TestNG-tests-1] INFO  Resources.Base - Menu bar is displayed
+22:44:21.057 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage
+22:44:21.063 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+22:44:21.184 [TestNG-tests-2] INFO  Resources.Base - Successfully validated Text message
