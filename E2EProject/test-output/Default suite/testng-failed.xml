@@ -6,7 +6,7 @@
       <class name="Academy.HomePage">
         <methods>
           <include name="initializeDriver"/>
-          <include name="verifyInvalidCredentialMessage" invocation-numbers="0 1"/>
+          <include name="verifyInvalidCredentialMessage" invocation-numbers="1"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- Academy.HomePage -->

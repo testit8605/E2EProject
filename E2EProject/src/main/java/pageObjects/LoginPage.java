@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class LoginPage 
 {
 public WebDriver driver;
@@ -21,7 +22,8 @@ public WebDriver driver;
 	private By email = By.id("email");
 	private By password = By.id("password");
 	private By login = By.xpath("//input[@data-testid='login-button']");
-	private By forgotPassword = By.xpath("//a[normalize-space()='Forgot Password']");
+	//private By forgotPassword = By.xpath("//a[normalize-space()='Forgot Password']");
+	private By forgotPassword = By.linkText("Forgot Password");
 	private By invaidCredentials = By.cssSelector("[class='bodySmall m-b-3-xs text-center-xs auth-flash-error']");
 	private By signUp = By.cssSelector("[href*='sign_up']");
 	
@@ -60,7 +62,7 @@ public WebDriver driver;
 	
 	public void webDriverWait(By locator)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));	
 	}
 	

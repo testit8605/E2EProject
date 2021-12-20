@@ -1,0 +1,8 @@
+14:54:19.428 [main] INFO  Resources.Base - Navigated to HomePage
+14:54:26.041 [main] INFO  Resources.Base - Restricted User
+14:54:36.372 [main] INFO  Resources.Base - Navigated to HomePage
+14:54:40.240 [main] INFO  Resources.Base - Non Restricted User
+15:59:56.910 [TestNG-tests-1] INFO  Resources.Base - Navigated to HomePage
+15:59:58.661 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+15:59:59.461 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage
+15:59:59.603 [TestNG-tests-2] INFO  Resources.Base - Successfully validated Text message

@@ -15,7 +15,7 @@ import pageObjects.LandingPage;
 
 public class ValidateNavigationBar extends Base 
 {
-	public static Logger log = LogManager.getLogger(Base.class.getName());
+	//public static Logger log = LogManager.getLogger(Base.class.getName());
 	//public WebDriver driver;
 	
 //	@BeforeTest
@@ -27,8 +27,8 @@ public class ValidateNavigationBar extends Base
 	@Test
 	public void isNavigationBasDisplays() throws IOException
 	{		
-		driver.get(prop.getProperty("url"));
-		log.info("Navigated to HomePage");
+//		driver.get(prop.getProperty("url"));
+//		log.info("Navigated to HomePage");
 		
 		LandingPage lp = new LandingPage(driver);
 		Assert.assertTrue(lp.getNavigationBar().isDisplayed());

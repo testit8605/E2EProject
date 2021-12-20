@@ -10,6 +10,8 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -30,10 +32,11 @@ public class Base
 {
 	public WebDriver driver;
 	public Properties prop;
+	public static Logger log;
 	
 	//@Parameters("browseName")
 	@BeforeTest
-	public WebDriver initializeDriver() throws IOException
+	public void initializeDriver() throws IOException
 	{
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
@@ -73,12 +76,12 @@ public class Base
 		{
 			System.out.println("We do not support this driver");
 		}
-		
-		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
-		return driver;
-	
+		driver.get(prop.getProperty("url"));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		log = LogManager.getLogger(Base.class.getName());
+		log.info("Navigated to HomePage");
 	}
 	
 	public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException

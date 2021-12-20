@@ -18,7 +18,7 @@ import pageObjects.LandingPage;
 
 public class ValidateTitle extends Base 
 {
-	public static Logger log = LogManager.getLogger(Base.class.getName());
+	//public static Logger log = LogManager.getLogger(Base.class.getName());
 	LandingPage lp;
 	//public WebDriver driver;
 	
@@ -31,8 +31,8 @@ public class ValidateTitle extends Base
 	@Test(priority = 1)
 	public void basePageNavigation() throws IOException
 	{
-		driver.get(prop.getProperty("url"));
-		log.info("Navigated to HomePage");
+//		driver.get(prop.getProperty("url"));
+//		log.info("Navigated to HomePage");
 		
 		lp = new LandingPage(driver);
 		Assert.assertEquals(lp.getTitle().getText(), "An Academy to Learn Earn & Shine  in your QA Career");

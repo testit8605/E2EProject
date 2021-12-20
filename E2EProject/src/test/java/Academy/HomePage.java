@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,7 +20,7 @@ import pageObjects.LoginPage;
 
 public class HomePage extends Base
 {
-	public static Logger log = LogManager.getLogger(Base.class.getName());
+	//public static Logger log = LogManager.getLogger(Base.class.getName());
 	//public WebDriver driver;
 	
 //	@BeforeTest
@@ -28,11 +29,17 @@ public class HomePage extends Base
 //		driver = initializeDriver();
 //	}
 	
-	@Test(dataProvider="getData")
-	public void verifyInvalidCredentialMessage(String userName, String pass, String text) throws IOException, InterruptedException
+	@BeforeMethod
+	public void beforeMethod() throws IOException, InterruptedException
 	{
 		driver.get(prop.getProperty("url"));
 		log.info("Navigated to HomePage");
+	}
+	
+	@Test(dataProvider="getData")
+	public void verifyInvalidCredentialMessage(String userName, String pass, String text) throws IOException, InterruptedException
+	{
+		
 		LandingPage lp = new LandingPage(driver);
 		LoginPage llp = lp.getLogin();
 		llp.getEmail().sendKeys(userName);

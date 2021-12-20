@@ -21,6 +21,7 @@ public class ForgotPasswordPage
 	private By next = By.name("commit");
 	private By checkYourEmailText = By.cssSelector("[class*='heading']");
 	
+	
 	public WebElement getEmail()
 	{
 		return driver.findElement(email);
@@ -39,8 +40,10 @@ public class ForgotPasswordPage
 	
 	public void webDriverWait(By locator)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));	
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+		System.out.println("Im pringting");
 	}
 	
 	
