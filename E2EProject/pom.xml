@@ -35,13 +35,10 @@
         <configuration>
           
           <suiteXmlFiles>
-            <suiteXmlFile>${xmlFile}</suiteXmlFile>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
           
-          <systemPropertyVariables>
-          <executionBrowser>${browser}</executionBrowser>
-          <executionUrl>${urlToBeTested}</executionUrl>
-          </systemPropertyVariables>
+         
           
         </configuration>
       </plugin>        

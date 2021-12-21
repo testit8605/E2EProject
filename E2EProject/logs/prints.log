@@ -1,6 +1,8 @@
-15:19:05.367 [main] INFO  Resources.Base - Navigated to HomePage
-15:19:09.254 [main] INFO  Resources.Base - Navigated to HomePage
-15:19:21.460 [main] INFO  Resources.Base - Restricted User
-15:19:36.981 [main] INFO  Resources.Base - Navigated to HomePage
-15:19:41.075 [main] INFO  Resources.Base - Non Restricted User
-16:41:09.407 [main] INFO  Resources.Base - Navigated to HomePage
+17:33:38.571 [main] INFO  Resources.Base - Restricted User
+17:33:51.939 [main] INFO  Resources.Base - Navigated to HomePage
+17:33:56.985 [main] INFO  Resources.Base - Non Restricted User
+17:38:37.404 [main] INFO  Resources.Base - Navigated to HomePage
+17:38:39.039 [main] INFO  Resources.Base - Navigated to HomePage
+17:38:46.532 [main] INFO  Resources.Base - Restricted User
+17:38:54.738 [main] INFO  Resources.Base - Navigated to HomePage
+17:38:57.868 [main] INFO  Resources.Base - Non Restricted User
