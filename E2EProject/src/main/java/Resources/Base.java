@@ -41,6 +41,8 @@ public class Base
 	@BeforeTest
 	public void initializeDriver(String browseName, String urlToBeTested) throws IOException
 	{
+		System.out.println(browseName);
+		System.out.println(urlToBeTested);
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
@@ -106,7 +108,7 @@ public class Base
 	@AfterTest
 	public void tearDown()
 	{
-		driver.close();
+		driver.quit();
 	}
 	
 	
