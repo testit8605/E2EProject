@@ -81,7 +81,7 @@ public class Base
 		}
 		driver.manage().window().maximize();
 		driver.get(urlToBeTested);
-		//driver.get(prop.getProperty("url"));
+		//qdriver.get(prop.getProperty("url"));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		log = LogManager.getLogger(Base.class.getName());

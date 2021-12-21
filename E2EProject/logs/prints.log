@@ -1,3 +1,4 @@
-19:01:50.088 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
-19:01:51.512 [TestNG-tests-1] INFO  Resources.Base - Navigated to HomePage
-19:01:52.894 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage
+19:26:16.042 [TestNG-tests-1] INFO  Resources.Base - Menu bar is displayed
+19:26:22.530 [TestNG-tests-3] INFO  Resources.Base - Restricted User
+19:26:30.256 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+19:26:33.034 [TestNG-tests-3] INFO  Resources.Base - Non Restricted User

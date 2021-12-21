@@ -15,9 +15,9 @@ public class ExtentReporterNG
 	{
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//time stamp
 		String repName="Test-Report-"+timeStamp+".html";
-		String path = System.getProperty("user.dir")+"\\Reports\\"+repName;
+		//String path = System.getProperty("user.dir")+"\\Reports\\"+repName;
 		
-		//String path = System.getProperty("user.dir")+"\\Reports\\index.html";
+		String path = System.getProperty("user.dir")+"\\Reports\\index.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 		reporter.config().setReportName("Web Automation Results");
 		reporter.config().setDocumentTitle("Test Results");
