@@ -24,7 +24,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -34,16 +35,16 @@ public class Base
 	public Properties prop;
 	public static Logger log;
 	
-	//@Parameters("browseName")
+	@Parameters({"browser","urlToBeTested"})
 	@BeforeTest
-	public void initializeDriver() throws IOException
+	public void initializeDriver(String browseName, String urlToBeTested) throws IOException
 	{
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
 		
 		//***************************getting data from properties file***********************
-		String browseName= prop.getProperty("browser");
+		//String browseName= prop.getProperty("browser");
 		//***************************writing data to properties file*************************
 //		prop.setProperty("Ab", "CD");
 //		FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
@@ -77,7 +78,8 @@ public class Base
 			System.out.println("We do not support this driver");
 		}
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("url"));
+		driver.get(urlToBeTested);
+		//driver.get(prop.getProperty("url"));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		log = LogManager.getLogger(Base.class.getName());
