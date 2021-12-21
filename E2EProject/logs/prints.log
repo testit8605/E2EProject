@@ -1,8 +1,7 @@
-17:33:38.571 [main] INFO  Resources.Base - Restricted User
-17:33:51.939 [main] INFO  Resources.Base - Navigated to HomePage
-17:33:56.985 [main] INFO  Resources.Base - Non Restricted User
-17:38:37.404 [main] INFO  Resources.Base - Navigated to HomePage
-17:38:39.039 [main] INFO  Resources.Base - Navigated to HomePage
-17:38:46.532 [main] INFO  Resources.Base - Restricted User
-17:38:54.738 [main] INFO  Resources.Base - Navigated to HomePage
-17:38:57.868 [main] INFO  Resources.Base - Non Restricted User
+18:47:55.295 [TestNG-tests-1] INFO  Resources.Base - Navigated to HomePage
+18:47:56.708 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage
+18:47:57.400 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+18:47:58.409 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+18:52:22.106 [TestNG-tests-1] INFO  Resources.Base - Navigated to HomePage
+18:52:23.517 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+18:52:24.983 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage

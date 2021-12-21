@@ -2,17 +2,16 @@ package Resources;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
+
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -21,11 +20,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -37,18 +35,18 @@ public class Base
 	public Properties prop;
 	public static Logger log;
 	
-	@Parameters({"browser","urlToBeTested"})
+	//@Parameters({"browser","urlToBeTested"})
 	@BeforeTest
-	public void initializeDriver(String browseName, String urlToBeTested) throws IOException
+	public void initializeDriver() throws IOException
 	{
-		System.out.println(browseName);
-		System.out.println(urlToBeTested);
+//		System.out.println(browseName);
+//		System.out.println(urlToBeTested);
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
 		
 		//***************************getting data from properties file***********************
-		//String browseName= prop.getProperty("browser");
+		String browseName= prop.getProperty("browser");
 		//***************************writing data to properties file*************************
 //		prop.setProperty("Ab", "CD");
 //		FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
@@ -82,8 +80,8 @@ public class Base
 			System.out.println("We do not support this driver");
 		}
 		driver.manage().window().maximize();
-		driver.get(urlToBeTested);
-		//driver.get(prop.getProperty("url"));
+		//driver.get(urlToBeTested);
+		driver.get(prop.getProperty("url"));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		log = LogManager.getLogger(Base.class.getName());
