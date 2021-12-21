@@ -1,7 +1,7 @@
-18:43:19.419 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage
-18:43:20.077 [TestNG-tests-1] INFO  Resources.Base - Navigated to HomePage
-18:43:20.235 [TestNG-tests-1] INFO  Resources.Base - Menu bar is displayed
-18:44:07.213 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
-18:44:08.131 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage
-18:44:08.273 [TestNG-tests-2] INFO  Resources.Base - Successfully validated Text message
-18:44:08.380 [TestNG-tests-2] INFO  Resources.Base - Menu bar is displayed
+18:47:55.295 [TestNG-tests-1] INFO  Resources.Base - Navigated to HomePage
+18:47:56.708 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage
+18:47:57.400 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+18:47:58.409 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+18:52:22.106 [TestNG-tests-1] INFO  Resources.Base - Navigated to HomePage
+18:52:23.517 [TestNG-tests-3] INFO  Resources.Base - Navigated to HomePage
+18:52:24.983 [TestNG-tests-2] INFO  Resources.Base - Navigated to HomePage

@@ -41,7 +41,6 @@
           <executionBrowser>${browser}</executionBrowser>
           <executionUrl>${urlToBeTested}</executionUrl>
           </systemPropertyVariables>
-          
         </configuration>
       </plugin>
 
