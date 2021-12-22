@@ -6,7 +6,6 @@
 	<listener class-name = "Academy.Listeners"/>
 </listeners>
 
-
   <test  name="ValidateNavigationBar">
     <classes>
       <class name="Academy.ValidateNavigationBar"/>

@@ -52,7 +52,7 @@ public class ValidateTitle extends Base
 	{
 		getScrollToHieght(2300, driver);
 		String text = lp.getTextOfViewAllCourseButton().getText();
-		Assert.assertEquals(text, "VIEW ALL COURSES");
+		Assert.assertEquals(text, "VIEW ALL COURSE");
 	}
 	
 //	@AfterTest

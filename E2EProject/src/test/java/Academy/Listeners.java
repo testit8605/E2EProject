@@ -3,6 +3,7 @@ package Academy;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.IRetryAnalyzer;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -14,7 +15,7 @@ import com.aventstack.extentreports.Status;
 import Resources.Base;
 import Resources.ExtentReporterNG;
 
-public class Listeners extends Base implements ITestListener
+public class Listeners extends Base implements ITestListener,IRetryAnalyzer
 {
 
 	ExtentReports extent = ExtentReporterNG.getReportObject();
@@ -76,6 +77,20 @@ public class Listeners extends Base implements ITestListener
 	@Override
 	public void onFinish(ITestContext context) {
 		extent.flush();
+	}
+	
+	
+	int counter =0;
+	int retryLimit = 3;
+	
+	@Override
+	public boolean retry(ITestResult result) {
+		if(counter<retryLimit)
+		{
+			counter++;
+			return true;
+		}
+		return false;
 	}
 
 }
