@@ -45,6 +45,7 @@ public class Listeners extends Base implements ITestListener,IRetryAnalyzer
 			e1.printStackTrace();
 		}
 		try {
+			
 			String screenshotPath = getScreenShotPath(testMethodName, driver);
 			extentTest.get().addScreenCaptureFromPath(screenshotPath);
 		} catch (IOException e) {

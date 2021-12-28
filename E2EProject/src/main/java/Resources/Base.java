@@ -16,6 +16,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -95,6 +96,12 @@ public class Base
 		String destPath = System.getProperty("user.dir")+"\\Screenshot\\"+testCaseName+".png";
 		FileUtils.copyFile(source, new File(destPath));
 		return destPath;
+	}
+	
+	public static void DrawBorder(WebElement element, WebDriver driver)
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].style.border= '3px solid red'", element);
 	}
 	
 	public static void getScrollToHieght(int height, WebDriver driver) 
